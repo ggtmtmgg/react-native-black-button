@@ -22,7 +22,9 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <RNBlackButton />
+        <Text>{RNBlackButton}</Text>
+        <RNBlackButton text='text' style={{height: 100, width: 100}} />
+        <Text>hogehoge</Text>
       </View>
     );
   }

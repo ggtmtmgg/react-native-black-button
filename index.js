@@ -1,6 +1,11 @@
+import { PropTypes } from 'react';
+import { requireNativeComponent, View } from 'react-native';
 
-import { NativeModules } from 'react-native';
+var iface = {
+    name: 'RNBlackButton',
+    PropTypes: {
+      ...View.propTypes // include the default view properties
+    }
+}
 
-const { RNBlackButton } = NativeModules;
-
-export default RNBlackButton;
+module.exports = requireNativeComponent('RNBlackButton', iface);
